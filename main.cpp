@@ -184,6 +184,8 @@ int main() {
         }
       } else {
         cout<< ANSI_COLOR_RED "ERROR CARTA NÃO ACHADA!" ANSI_COLOR_RESET <<endl;
+        cout<< ANSI_COLOR_RED "Terminando jogo..." ANSI_COLOR_RESET <<endl;
+        return -1;
       }
       
       bool result_busca =  buscaSequencia(player[contJog].cards, player[contJog].cards.size());
