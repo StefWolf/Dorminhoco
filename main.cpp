@@ -106,7 +106,7 @@ int main() {
 
   for(int i = 0; i < 3; i++){
     string name_dinamic;
-    cout<<"Digite seu nome: "<<endl;
+    cout<<"Digite seu nome: ";
     cin >> name_dinamic;
     player[i].name = name_dinamic;
   }
@@ -128,12 +128,13 @@ int main() {
   }
   /*------ AMOSTRA DO TABULEIRO ATUAL --------*/
   for(Player play : player){
-    cout<<"Jogador "<<play.name << ", Cartas atuais: "<<endl;
+    cout<< ANSI_COLOR_BLUE "-------------------------------------------" ANSI_COLOR_RESET<<endl;
+    cout<<"Jogador "<<play.name << " | Cartas atuais: ";
     for(char cards : play.cards){
       cout<<cards<<" ";
       
     }
-    cout<<"\n"<<endl;
+    cout<< ANSI_COLOR_BLUE "\n-------------------------------------------" ANSI_COLOR_RESET<<endl;
   }
 
   char carta_adiante;
@@ -183,7 +184,7 @@ int main() {
           cout<<vet;
         }
       } else {
-        cout<< ANSI_COLOR_RED "ERROR CARTA NÃO ACHADA!" ANSI_COLOR_RESET <<endl;
+        cout<< ANSI_COLOR_RED "ERROR CARTA NÃO ACHADA! >:(" ANSI_COLOR_RESET <<endl;
         cout<< ANSI_COLOR_RED "Terminando jogo..." ANSI_COLOR_RESET <<endl;
         return -1;
       }
